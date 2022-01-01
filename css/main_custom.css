@@ -3,6 +3,12 @@
   src: url("../fonts/Algerian.ttf");
 }
 
+@keyframes grow {
+  from {
+    opacity: 0.3;
+  }
+}
+
 :root {
   --bg: #ffffff0d;
   --btn-shadow: #b8b6b6;
@@ -89,7 +95,7 @@
 
 #menuItemContainer {
   width: 45.5rem;
-  height: min-content;
+  height: 4.2rem;
   margin-bottom: 10rem;
   border-radius: 10px;
   gap: 2rem;
