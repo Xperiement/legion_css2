@@ -365,3 +365,118 @@
   font-size: 22px !important;
   transform: translateY(3px);
 }
+
+/* Loading Screen */
+#loadInfoRHolder {
+  display: none !important;
+}
+
+#loadInfoLHolder {
+  color: transparent;
+  bottom: 0px;
+}
+
+#loadEditrBtn {
+  bottom: 0px;
+}
+
+.menuMGLink > a {
+  font-size: 38px;
+  text-decoration: underline;
+  color: #f8d047 !important;
+}
+
+#loadGamNm {
+  font-size: 0px;
+}
+#loadGamNm:after {
+  position: absolute;
+  content: "Game Loading";
+  font-size: 30px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content;
+  font-size: 82px;
+  color: #f8d047;
+  margin-top: -11rem;
+}
+
+#initLoader > div:first-child {
+  width: 39rem;
+  height: 2.3rem;
+  border-radius: 5px;
+  border: 4px solid #f8d047;
+  background: #cdcdcd;
+  overflow: hidden;
+}
+
+#initLoader > div:first-child > * {
+  display: none;
+}
+
+@keyframes init_loading {
+  0% {
+    transform: translateX(0);
+    width: 0%;
+  }
+
+  10% {
+    transform: translateX(0);
+  }
+
+  50% {
+    width: 32%;
+  }
+
+  100% {
+    width: 12%;
+    transform: translateX(39rem);
+  }
+}
+
+#initLoader > div:first-child::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  width: 12%;
+  background: #dd8e3a;
+  border-radius: 5px;
+  height: 100%;
+  animation: init_loading 2000ms ease 0ms infinite;
+}
+
+#loadTipsHolder {
+  font-size: 26px;
+  width: 39rem;
+  bottom: unset;
+  top: 50%;
+  margin-top: 3rem;
+  line-height: 3rem;
+}
+
+#initLoader::after {
+  position: absolute;
+  content: url(../img/logo_5.png);
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+}
+
+#initLoader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  object-fit: cover;
+  background-image: url(https://i.pinimg.com/originals/14/33/72/143372c494d35952f35fcc7d78b2a809.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
