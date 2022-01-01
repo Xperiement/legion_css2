@@ -1,0 +1,349 @@
+@font-face {
+  font-family: gamefont;
+  src: url("../fonts/Algerian.ttf");
+}
+
+:root {
+  --bg: #ffffff0d;
+  --btn-shadow: #b8b6b6;
+  --btn-background: #f7f5f5;
+}
+
+* {
+  letter-spacing: 3px;
+}
+
+#newsHolder,
+.youNewDiv,
+/* #aHolder, */
+#headerRight,
+#mapInfoHolder,
+#braveWarning {
+  display: none !important;
+}
+
+#signedInHeaderBar,
+#menuClassContainer {
+  display: none !important;
+}
+
+#tlInfHold,
+#chatHolder,
+#voiceDisplay {
+  display: none !important;
+}
+
+#menuBtnHost,
+#menuBtnBrowser,
+#menuBtnRanked {
+  display: none !important;
+}
+
+#menuItemContainer > .menuItem:nth-child(2),
+#menuItemContainer > .menuItem:nth-child(3),
+#menuItemContainer > .menuItem:nth-child(5),
+#menuItemContainer > .menuItem:nth-child(6),
+.menuItem > span {
+  display: none !important;
+}
+
+/* Main menu background */
+#instructionHolder::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("https://thumbs.gfycat.com/SeparateSameAmurratsnake-size_restricted.gif");
+  background-position: center;
+  background-size: cover;
+}
+
+#instructions {
+  font-size: 66px !important;
+}
+
+#instructions::before {
+  content: url(../img/play.svg);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(13px);
+  margin-right: 1rem;
+}
+
+/* Ads */
+#aContainer {
+  border: 3px solid var(--bg) !important;
+  background: var(--bg) !important;
+  padding: 0px !important;
+}
+
+#aContainer > div:nth-child(2) {
+  border-radius: 5px;
+}
+
+#menuItemContainer {
+  width: 45.5rem;
+  height: min-content;
+  margin-bottom: 10rem;
+  border-radius: 10px;
+  gap: 2rem;
+  top: unset;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.menuItem {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--btn-background);
+  box-shadow: 0px 10px 0px var(--btn-shadow);
+  color: black !important;
+  font-weight: bolder;
+  text-transform: uppercase;
+
+  width: calc(100% - 0.4rem);
+  height: 2.2rem !important;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0.2rem !important;
+  border: none !important;
+  border-radius: 10px;
+}
+
+.menuItem:nth-child(7) {
+  grid-column: 1 / 2;
+  grid-row: 1;
+}
+
+.menuItem:nth-child(1) {
+  grid-column: 2;
+}
+
+.menuItem:nth-child(4) {
+  grid-column: 3;
+}
+
+.menuItemTitle {
+  display: none !important;
+}
+
+/* #signedOutHeaderBar > div::after, */
+.menuItem::before {
+  /* content: url(../img/profile.svg); */
+  position: relative;
+  width: 3.4rem;
+  height: 37px;
+}
+.menuItem::after {
+  /* content: "Henlo"; */
+  position: relative;
+  width: auto;
+  height: auto;
+  color: black !important;
+  font-size: 25px;
+}
+
+.menuItem:nth-child(1)::before {
+  content: url(../img/profile.svg);
+}
+.menuItem:nth-child(1)::after {
+  content: "Profile";
+}
+
+.menuItem:nth-child(4)::before {
+  content: url(../img/market.svg);
+}
+.menuItem:nth-child(4)::after {
+  content: "Market";
+}
+
+.menuItem:nth-child(7)::before {
+  content: url(../img/settings.svg);
+}
+.menuItem:nth-child(7)::after {
+  content: "Settings";
+}
+
+#signedOutHeaderBar {
+  background: transparent !important;
+  margin: 3.7rem 2rem !important;
+  padding: 0 !important;
+}
+
+#signedOutHeaderBar > div {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  background: var(--btn-background);
+  box-shadow: 0px 10px 0px var(--btn-shadow);
+  font-size: 0px !important;
+  width: min-content !important;
+  height: 2.2rem !important;
+  margin-bottom: 1.5rem;
+  padding: 1rem 1.2rem !important;
+  border: none !important;
+  border-radius: 10px;
+}
+
+#signedOutHeaderBar > div > span {
+  font-size: 0px !important;
+}
+
+#signedOutHeaderBar > div::before {
+  content: url(../img/login.svg);
+  position: relative;
+  width: 1.4rem;
+  height: 37px;
+}
+
+#signedOutHeaderBar > div::after {
+  content: "LOGIN/SIGNUP";
+  position: relative;
+  width: auto;
+  height: auto;
+  color: black !important;
+  font-size: 25px;
+}
+
+#mainLogo {
+  content: url("../img/header.png");
+  margin-top: 69px !important;
+  height: 151px !important;
+}
+
+#seasonLabel {
+  display: none !important;
+}
+/* .buttonPI {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  background: var(--btn-background);
+  box-shadow: 0px 10px 0px var(--btn-shadow);
+  color: black !important;
+  font-weight: bolder;
+  text-transform: uppercase;
+
+  width: 100%;
+  height: 2.2rem !important;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0.2rem !important;
+  border: none !important;
+  border-radius: 10px;
+}
+
+
+
+.buttonPI {
+  margin-bottom: 0rem;
+  margin-left: 1.2rem !important;
+} */
+
+/* 
+#spectButton {
+  top: 0 !important;
+  left: 0 !important;
+  transform: unset !important;
+  margin: 5.8rem 2rem !important;
+}
+
+#signedOutHeaderBar {
+  background: transparent;
+}
+#signedOutHeaderBar > div {
+  width: 100% !important;
+  color: transparent !important;
+}
+#signedOutHeaderBar > div > span {
+  margin-top: 0px !important;
+}
+
+
+
+ */
+
+#subLogoButtons {
+  top: 0;
+  right: 0;
+  left: unset;
+  display: flex;
+  transform: none;
+  margin: 4.2rem 2rem;
+}
+
+.buttonPI {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  background: var(--btn-background);
+  box-shadow: 0px 10px 0px var(--btn-shadow);
+  font-size: 0px !important;
+
+  width: 10rem;
+  height: 2.2rem !important;
+  margin-bottom: 1.5rem;
+  padding: 1rem 0.2rem !important;
+  border: none !important;
+  border-radius: 10px;
+}
+
+.buttonPI.button.small {
+  font-size: 0px !important;
+  height: 3rem !important;
+  margin-left: 1.5rem;
+}
+
+.buttonPI::before {
+  content: url(../img/invite.svg);
+  position: relative;
+  width: 2.4rem;
+  height: 37px;
+  transform: translateY(4px);
+}
+.buttonPI::after {
+  content: "Invite";
+  position: relative;
+  width: auto;
+  height: auto;
+  color: black !important;
+  font-size: 25px;
+  transform: translateY(4px);
+}
+
+.buttonPI:last-child::before {
+  content: url(../img/join.svg);
+}
+
+.buttonPI:last-child::after {
+  content: "Join";
+}
+
+#spectButton {
+  top: 0 !important;
+  left: unset !important;
+  right: 0 !important;
+  transform: unset !important;
+  margin: 10.8rem 2rem !important;
+}
+
+#spectButton > span {
+  font-size: 22px !important;
+  transform: translateY(3px);
+}
