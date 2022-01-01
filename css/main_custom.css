@@ -131,6 +131,11 @@
   padding: 1rem 0.2rem !important;
   border: none !important;
   border-radius: 10px;
+  transition: transform 100ms;
+}
+
+.menuItem:hover {
+  transform: scale(0.95);
 }
 
 .menuItem:nth-child(7) {
