@@ -28,8 +28,11 @@
 }
 
 #tlInfHold,
-#chatHolder,
 #voiceDisplay {
+  display: none !important;
+}
+
+#aimRecticle:not([style*="display: block"]) ~ #chatUI {
   display: none !important;
 }
 
