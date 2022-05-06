@@ -1,6 +1,6 @@
 @font-face {
   font-family: gamefont;
-  src: url("../fonts/Algerian.ttf");
+  src: url("https://raw.githubusercontent.com/Xperiement/legion_css2/main/fonts/Algerian.ttf");
 }
 
 @keyframes grow {
@@ -64,7 +64,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  background-image: url("https://thumbs.gfycat.com/SeparateSameAmurratsnake-size_restricted.gif");
+  background-image: url("https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/main_bg.gif");
   background-position: center;
   background-size: cover;
 }
@@ -74,7 +74,7 @@
 }
 
 #instructions::before {
-  content: url(../img/play.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/play.svg);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -157,7 +157,7 @@
 
 /* #signedOutHeaderBar > div::after, */
 .menuItem::before {
-  /* content: url(../img/profile.svg); */
+  /* content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/profile.svg); */
   position: relative;
   width: 3.4rem;
   height: 37px;
@@ -172,21 +172,21 @@
 }
 
 .menuItem:nth-child(1)::before {
-  content: url(../img/profile.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/profile.svg);
 }
 .menuItem:nth-child(1)::after {
   content: "Profile";
 }
 
 .menuItem:nth-child(4)::before {
-  content: url(../img/market.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/market.svg);
 }
 .menuItem:nth-child(4)::after {
   content: "Market";
 }
 
 .menuItem:nth-child(7)::before {
-  content: url(../img/settings.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/settings.svg);
 }
 .menuItem:nth-child(7)::after {
   content: "Settings";
@@ -220,7 +220,7 @@
 }
 
 #signedOutHeaderBar > div::before {
-  content: url(../img/login.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/login.svg);
   position: relative;
   width: 1.4rem;
   height: 37px;
@@ -236,7 +236,7 @@
 }
 
 #mainLogo {
-  content: url("../img/header.png");
+  content: url("https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/header.png");
   margin-top: 69px !important;
   height: 151px !important;
 }
@@ -329,7 +329,7 @@
 }
 
 .buttonPI::before {
-  content: url(../img/invite.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/invite.svg);
   position: relative;
   width: 2.4rem;
   height: 37px;
@@ -346,7 +346,7 @@
 }
 
 .buttonPI:last-child::before {
-  content: url(../img/join.svg);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/join.svg);
 }
 
 .buttonPI:last-child::after {
@@ -471,7 +471,7 @@
 
 #initLoader::after {
   position: absolute;
-  content: url(../img/logo_5.png);
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/logo_5.png);
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -486,10 +486,23 @@
   left: 0;
   right: 0;
   object-fit: cover;
-  background-image: url(../img/loading_bg.png);
+  background-image: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/loading_bg.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
+}
+
+
+#victorySub[src*="def"] {
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/def.png)
+}
+
+#victorySub[src*="vic"] {
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/vic.png)
+}
+
+#victorySub[src*="dra"] {
+  content: url(https://raw.githubusercontent.com/Xperiement/legion_css2/main/img/dra.png)
 }
